@@ -1,4 +1,4 @@
-<?php //require_once 'lib/autoLoader.php';
+<?php require_once 'lib/autoLoader.php';
  session_start();?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -13,12 +13,12 @@
 		<style type="text/css">
 			@import url(style.css);
 		</style>
-	
+
 	</head>
 	<body>
 		<?php
-			
-			require_once 'controleur/controleurPrincipal.php';	
+
+			require_once 'controleur/controleurPrincipal.php';
 		?>
     <body>
 </html>
