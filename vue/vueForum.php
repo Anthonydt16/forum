@@ -1,16 +1,18 @@
 <div class="conteneur">
     <?php
-        echo '<a class="btn btn-primary " style="text-align:center" href="index.php?forum=Admin" role="button">Admin panel</a>'; 
+        if($_SESSION['login'] == "admin"){
+        echo '<a class="btn btn-primary " style="text-align:center" href="index.php?forum=Admin" role="button">Admin panel</a>';
+      }
     ?>
-  
+
 <a class="btn btn-primary " style="text-align:center" href="index.php?forum=Deconnexion" role="button">Deconnexion</a>
 
     <div class="card-header">Chat</div>
                     <div class="card-body height3">
                         <ul class="chat-list">
-                            
+
                                 <?php
-                                
+
                                     foreach ($tabTexte as $key ) {
                                         if($_SESSION['login'] == $key['UserTexte'] ){
                                             $typeMessage ="on";
@@ -35,12 +37,12 @@
                         </ul>
                     </div>
                 </div>
-                
-                
-            
+
+
+
             </div>
 
-                <?php       
+                <?php
                     echo $formulaireEnvoie->afficherFormulaire();
                 ?>
 
