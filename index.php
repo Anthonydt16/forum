@@ -20,5 +20,6 @@
 
 			require_once 'controleur/controleurPrincipal.php';
 		?>
+       <script src="https://kit.fontawesome.com/45e38e596f.js" crossorigin="anonymous"></script>
     <body>
 </html>

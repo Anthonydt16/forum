@@ -25,7 +25,8 @@
                                         echo '<div class="chat-body">';
                                             echo'<div class="chat-message">';
                                                 echo'<p>'.$key['UserTexte'].'</p>';
-                                                echo '<p style="font-size: x-small;">'.$key['date'].'</p>';
+                                                echo '<p style="font-size: x-small;">'.$key['date'];
+                                                echo '<button type="submit" class="btn" onclick=window.location.href="index.php?idSupp='.$key['IDTexte'].'"><span class="fas fa-trash-alt"></span></button></p>';
                                                 echo '<h5>'.$key['contenue'].'</h5>';
                                             echo '</div>';
                                         echo'</div>';

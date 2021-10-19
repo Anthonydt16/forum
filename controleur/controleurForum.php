@@ -5,7 +5,7 @@ $tabTexte = $uneConnex->recupText($uneConnex);
 
 require_once 'lib/formulaire.php';
 $formulaireEnvoie = new Formulaire('post', 'index.php', 'fEnvoie', 'fEnvoie');
- 
+
 $formulaireEnvoie->ajouterComposantLigne($formulaireEnvoie->creerTextarea('chat', 'chat', '', 1, 'Entrez votre identifiant', 'ici tu ecris mec ',"form-control"));
 $formulaireEnvoie->ajouterComposantTab();
 
@@ -25,9 +25,13 @@ if(!empty($_POST['chat'])){
         header('location: index.php');
 
     }
-    
+
 }
 
-require_once 'vue/vueForum.php'; 
+if(isset($_GET['idSupp'])){
+  $uneConnex->suppMessage($_GET['idSupp']);
+  echo "message supprimer";
 
+}
 
+require_once 'vue/vueForum.php';

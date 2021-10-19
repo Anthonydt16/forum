@@ -82,4 +82,11 @@ class DBConnex extends PDO{
         return $donnee;
     }
 
+    public function suppMessage($ID){
+        $stmt = DBConnex::getInstance()->prepare(" DELETE FROM `texte` WHERE `texte`.`IDTexte` = :ID ");
+        $stmt->bindParam(':ID', $ID);
+        $stmt->execute();
+
+    }
+
 }
